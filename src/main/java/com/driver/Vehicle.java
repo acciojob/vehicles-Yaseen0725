@@ -17,12 +17,25 @@ public class Vehicle {
 
     public void move(int speed, int direction){
         //set the values of currentSpeed and currentDirection
+        this.currentSpeed = speed;
+        this.currentDirection = direction;
         System.out.println("move method called - The speed is changed to: " + currentSpeed + ", and the direction is changed to: " + currentDirection + " degrees");
     }
 
     public void stop(){
-
+        currentSpeed = 0;
         System.out.println("stop method called - The vehicle is stopped");
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public int getCurrentSpeed() {
+        return currentSpeed;
+    }
+
+    public int getCurrentDirection() {
+        return currentDirection;
+    }
 }
